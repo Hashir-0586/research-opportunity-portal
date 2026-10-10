@@ -1,0 +1,225 @@
+/* =====================================================================
+   University Research Opportunity Portal
+   Custom CSS Styles
+   ===================================================================== */
+
+:root {
+  --primary-color: #0d6efd;
+  --primary-hover: #0b5ed7;
+  --secondary-bg: #f8f9fa;
+  --card-border: #e9ecef;
+  --text-muted: #6c757d;
+  --open-badge-bg: #198754;
+  --closed-badge-bg: #dc3545;
+  --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --shadow-md: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.12);
+  --transition-fast: all 0.2s ease-in-out;
+}
+
+body {
+  background-color: #f4f6f9;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #212529;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.brand-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+/* Hero & Header Section */
+.hero-banner {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: #ffffff;
+  padding: 2.5rem 0;
+  margin-bottom: 2rem;
+  border-bottom: 4px solid #f39c12;
+}
+
+.hero-banner h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.hero-banner p {
+  font-size: 1.05rem;
+  opacity: 0.9;
+  margin-bottom: 0;
+}
+
+/* Opportunity Cards */
+.opportunity-card {
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  background: #ffffff;
+  transition: var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.opportunity-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: #cbd3dc;
+}
+
+.opportunity-card .card-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-title-link {
+  color: #1a252f;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.15rem;
+  line-height: 1.35;
+  transition: color 0.15s ease;
+}
+
+.card-title-link:hover {
+  color: var(--primary-color);
+}
+
+.card-meta-item {
+  display: flex;
+  align-items: flex-start;
+  font-size: 0.875rem;
+  color: #495057;
+  margin-bottom: 0.45rem;
+}
+
+.card-meta-icon {
+  width: 18px;
+  margin-right: 8px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.card-badge-status {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.35rem 0.65rem;
+  border-radius: 50rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-open {
+  background-color: var(--open-badge-bg);
+  color: #ffffff;
+}
+
+.badge-closed {
+  background-color: var(--closed-badge-bg);
+  color: #ffffff;
+}
+
+.skills-pill-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+}
+
+.skill-pill {
+  background-color: #e9ecef;
+  color: #495057;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.card-footer {
+  background-color: #fafbfc;
+  border-top: 1px solid #f0f2f5;
+  padding: 0.75rem 1.25rem;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+/* Loading & Empty States */
+#loadingSpinner {
+  padding: 4rem 1rem;
+}
+
+.empty-state-box {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 3.5rem 2rem;
+  text-align: center;
+  border: 2px dashed #dee2e6;
+}
+
+.empty-state-icon {
+  font-size: 3.5rem;
+  color: #adb5bd;
+  margin-bottom: 1rem;
+}
+
+/* Modals */
+.modal-header {
+  border-bottom: 1px solid #e9ecef;
+  background-color: #f8f9fa;
+  border-top-left-radius: calc(0.5rem - 1px);
+  border-top-right-radius: calc(0.5rem - 1px);
+}
+
+.modal-footer {
+  border-top: 1px solid #e9ecef;
+  background-color: #f8f9fa;
+}
+
+.detail-section-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+}
+
+/* Toast Container */
+.toast-container {
+  z-index: 1090;
+}
+
+/* Form validation styling */
+.form-label.required::after {
+  content: " *";
+  color: #dc3545;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  background-color: #ffffff;
+  border-top: 1px solid #dee2e6;
+  padding: 1.25rem 0;
+  font-size: 0.875rem;
+  color: #6c757d;
+}
